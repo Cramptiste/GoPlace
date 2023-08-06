@@ -7,9 +7,7 @@ import (
 	"strings"
 )
 
-// ProcessLine searches for old in line to replace it by new.
-// It returns found=true if the pattern was found, res with the resulting string.
-// and occ with the number of occurence of old.
+
 func ProcessLine(line, old, new string) (found bool, res string, occ int) {
 	oldLower := strings.ToLower(old)
 	newLower := strings.ToLower(new)
@@ -25,9 +23,7 @@ func ProcessLine(line, old, new string) (found bool, res string, occ int) {
 	return found, res, occ
 }
 
-// FindReplaceFile searches and replace old pattern by new inside src file.
-// It stores the content in dst file.
-// It returns the number of occurences of old, a slice of lines and an error if there is any.
+
 func FindReplaceFile(src string, dst string, old string, new string) (occ int, lines []int, err error) {
 	// open src file
 	srcFile, err := os.Open(src)
