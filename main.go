@@ -61,9 +61,9 @@ func FindReplaceFile(src string, dst string, old string, new string) (occ int, l
 }
 
 func main() {
-	old := "Go"
-	new := "Python"
-	occ, lines, err := FindReplaceFile("wikigo.txt", "wikipython.txt", old, new)
+	old := "Turks"
+	new := "armenians"
+	occ, lines, err := FindReplaceFile("turkk.txt", "armenians.txt", old, new)
 	if err != nil {
 		fmt.Printf("Error while executing find replace: %v\n", err)
 		return
